@@ -1,0 +1,56 @@
+body{
+	background: url("../../assets/images/cave-wallpaper.jpg");
+}
+
+.container{
+	font-family: Georgia, sans-serif;
+	text-align:center;
+}
+
+h1{
+	margin: 30px 0 30px 0;
+	font-size:70px;
+	color:white;
+	font-weight:20px;
+	font-family: Georgia, sans-serif;
+}
+
+.instructions{
+	width:auto;
+	height:auto;
+	background: black;
+	color:white;
+	margin: 0 0 0 100px;
+	padding: 10px 20px 20px 20px;
+	text-align:left;
+}
+
+.instructions h3{
+	font-size:30px;
+	margin-bottom:20px;
+
+}
+
+.crystals{
+	margin:20px 0 0 0;
+	height: auto;
+}
+
+img{
+	width:150px;
+	height:150px;
+}
+
+section{
+	font-size:30px;
+	width:400px;
+	background:black;
+	text-align:left;
+	color:white;
+	padding: 10px 20px 30px 20px;
+}
+
+section div{
+	padding:15px 0 15px 0;
+}
+
