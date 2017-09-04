@@ -1,6 +1,7 @@
 
-  var targetNumber = Math.floor(Math.random() * ((120-19)+1) + 19);
 
+  var targetNumber;
+  
   var counter = 0;
 
   var wins = 0;
@@ -59,171 +60,123 @@ var numberOptionsGreen = Math.floor(Math.random() * ((12-1)+1) + 1);
 
 $(document).ready(function() {
 
-    $("#start-reset").on("click", function() {
+    $("#start").on("click", function() {
+
+      var targetNumber = Math.floor(Math.random() * ((120-19)+1) + 19);
 
         $("#number-to-guess").text(targetNumber);
         console.log("Your target number is..." + targetNumber);
+      
+      $("#yourScore").empty(counter = 0);
+
     });
-});
 
-  $(".crystal-image-red").on("click", function(red) {
-    
-    var crystalValueRed = ($(this).attr("data-crystalvalue"));
-    crystalValueRed = parseInt(crystalValueRed);
-    
-    counter += crystalValueRed;
-    console.log("Add red: " + crystalValueRed);
+    //$("#reset").on("click", function() {
 
-     $("#yourScore").text(counter);
-      console.log("New score: " + counter);
+        //$("#number-to-guess").empty();
 
-    if (counter === targetNumber) {
-      wins++;
-      $("#winScore").text(wins);
-      console.log("You win");
-    }
+        //$("#yourScore").empty(counter = 0);
+    //});
 
-    else if (counter >= targetNumber) {
-      losses++;
-      $("#lossScore").text(losses);
-      console.log("You lose");
-    }
+    $(".crystal-image-red").on("click", function(red) {
+      
+      var crystalValueRed = ($(this).attr("data-crystalvalue"));
+      crystalValueRed = parseInt(crystalValueRed);
+      
+      counter += crystalValueRed;
+      console.log("Add red: " + crystalValueRed);
 
-  });
-
-  $(".crystal-image-blue").on("click", function(blue) {
-    
-    var crystalValueBlue = ($(this).attr("data-crystalvalue"));
-    crystalValueBlue = parseInt(crystalValueBlue);
-    
-    counter += crystalValueBlue;
-    console.log("Add blue: " + crystalValueBlue);
-
-     $("#yourScore").text(counter);
-      console.log("New score: " + counter);
-
-    if (counter === targetNumber) {
-      wins++;
-      $("#winScore").text(wins);
-      console.log("You win");
-    }
-
-    else if (counter >= targetNumber) {
-      losses++;
-      $("#lossScore").text(losses);
-      console.log("You lose");
-    }
-
-  });
-
-  $(".crystal-image-purple").on("click", function(purple) {
-    
-    var crystalValuePurple = ($(this).attr("data-crystalvalue"));
-    crystalValuePurple = parseInt(crystalValuePurple);
-    
-    counter += crystalValuePurple;
-    console.log("Add purple: " + crystalValuePurple);
-
-     $("#yourScore").text(counter);
-      console.log("New score: " + counter);
-
-    if (counter === targetNumber) {
-      wins++;
-      $("#winScore").text(wins);
-      console.log("You win");
-    }
-
-    else if (counter >= targetNumber) {
-      losses++;
-      $("#lossScore").text(losses);
-      console.log("You lose");
-    }
-
-  });
-
-  $(".crystal-image-green").on("click", function(green) {
-    
-    var crystalValueGreen = ($(this).attr("data-crystalvalue"));
-    crystalValueGreen = parseInt(crystalValueGreen);
-    
-    counter += crystalValueGreen;
-    console.log("Add green: " + crystalValueGreen);
-
-     $("#yourScore").text(counter);
-      console.log("New score: " + counter);
-
-    if (counter === targetNumber) {
-      wins++;
-      $("#winScore").text(wins);
-      console.log("You win");
-    }
-
-    else if (counter >= targetNumber) {
-      losses++;
-      $("#lossScore").text(losses);
-      console.log("You lose");
-    }
-
-  });
-
-/*
-  var numberOptions = Math.floor(Math.random() * ((12-1)+1) + 1);
-
-  //for (var i = 0; i < numberOptions.length; i++) {
-  
-
-    var redCrystal = $("#imageCrystal-red");
-
-    redCrystal.attr("data-crystalvalue", numberOptions);
-
-    var blueCrystal = $("#imageCrystal-blue");
-
-    blueCrystal.attr("data-crystalvalue", numberOptions);
-
-    var imageCrystal = $("#imageCrystal-purple");
-
-    imageCrystal.attr("data-crystalvalue", numberOptions);
-
-    var imageCrystal = $("#imageCrystal-green");
-
-    imageCrystal.attr("data-crystalvalue", numberOptions);
-  //}
-
-$(document).ready(function() {
-
-    $("#start-reset").on("click", function() {
-
-        $("#number-to-guess").text(targetNumber);
-            console.log(targetNumber);
-    });
-});
-
-
-    $("#imageCrystal-red").on("click", function() {
-
-        var crystalValue = ($(this).attr("#imagecrystal-red"));
-        crystalValue = parseInt(crystalValue);
-        
-        counter += crystalValue;
-
-        $("#yourScore").text(counter);
+       $("#yourScore").text(counter);
         console.log("New score: " + counter);
 
-        if (counter === targetNumber) {
-          wins++;
-          $("#winScore").text(wins);
-          console.log("You win");
-        }
-          else if (counter >= targetNumber) {
-            losses++;
-            $("#lossScore").text(losses);
-            console.log("You lose");
-          }
+      if (counter === targetNumber) {
+        wins++;
+        $("#winScore").text(wins);
+        console.log("You win");
+      }
+
+      else if (counter >= targetNumber) {
+        losses++;
+        $("#lossScore").text(losses);
+        console.log("You lose");
+      }
+
+    }); 
+
+    $(".crystal-image-blue").on("click", function(blue) {
+      
+      var crystalValueBlue = ($(this).attr("data-crystalvalue"));
+      crystalValueBlue = parseInt(crystalValueBlue);
+      
+      counter += crystalValueBlue;
+      console.log("Add blue: " + crystalValueBlue);
+
+       $("#yourScore").text(counter);
+        console.log("New score: " + counter);
+
+      if (counter === targetNumber) {
+        wins++;
+        $("#winScore").text(wins);
+        console.log("You win");
+      }
+
+      else if (counter >= targetNumber) {
+        losses++;
+        $("#lossScore").text(losses);
+        console.log("You lose");
+      }
 
     });
 
+    $(".crystal-image-purple").on("click", function(purple) {
+      
+      var crystalValuePurple = ($(this).attr("data-crystalvalue"));
+      crystalValuePurple = parseInt(crystalValuePurple);
+      
+      counter += crystalValuePurple;
+      console.log("Add purple: " + crystalValuePurple);
 
-  //$("#clear").on("click", function(){
-        //  $("#yourScore").empty();
-       // })
-*/
+       $("#yourScore").text(counter);
+        console.log("New score: " + counter);
+
+      if (counter === targetNumber) {
+        wins++;
+        $("#winScore").text(wins);
+        console.log("You win");
+      }
+
+      else if (counter >= targetNumber) {
+        losses++;
+        $("#lossScore").text(losses);
+        console.log("You lose");
+      }
+
+    });
+
+    $(".crystal-image-green").on("click", function(green) {
+      
+      var crystalValueGreen = ($(this).attr("data-crystalvalue"));
+      crystalValueGreen = parseInt(crystalValueGreen);
+      
+      counter += crystalValueGreen;
+      console.log("Add green: " + crystalValueGreen);
+
+       $("#yourScore").text(counter);
+        console.log("New score: " + counter);
+
+      if (counter === targetNumber) {
+        wins++;
+        $("#winScore").text(wins);
+        console.log("You win");
+      }
+
+      else if (counter >= targetNumber) {
+        losses++;
+        $("#lossScore").text(losses);
+        console.log("You lose");
+      }
+
+    });
+
+ });
+

@@ -21,7 +21,7 @@ h1{
 	background: black;
 	color:white;
 	margin: 0 0 0 100px;
-	padding: 10px 20px 20px 20px;
+	padding: 5px 20px 10px 20px;
 	text-align:left;
 }
 
@@ -41,16 +41,35 @@ img{
 	height:150px;
 }
 
+img:hover{
+
+}
+
 section{
 	font-size:30px;
 	width:400px;
 	background:black;
 	text-align:left;
 	color:white;
-	padding: 10px 20px 30px 20px;
+	padding: 5px 20px 25px 20px;
 }
 
 section div{
 	padding:15px 0 15px 0;
+}
+
+button{
+	margin: 10px 5px 20px 10px ;
+	width:85px;
+	height:55px;
+	font-size:25px;
+	font-family: Georgia, sans-serif;
+	color:#000;
+	background: #fff;
+}
+
+button:hover{
+	border: 1px solid;
+	color: green;
 }
 
